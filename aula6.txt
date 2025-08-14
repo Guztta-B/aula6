@@ -1,0 +1,39 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+  string nome;
+
+  int peso;
+  float altura;
+
+
+ cout << "digite seu nome: " <<endl;
+  getline (cin,nome);
+  cout << "digite sua altura: " <<endl;
+  cin >> altura;
+  cout << "seu peso: " <<endl;
+  cin >> peso;
+  double imc = peso/ pow(altura,2);
+  cout << nome << " seu imc e " << imc << endl;
+
+if (imc <= 18.5) {
+    cout << "magreza";
+} else if (imc > 18.5 && imc <= 24.9){
+
+    cout  << "normal ";
+} else if (imc > 24.9 && imc < 30){
+
+   cout << "sobrepeso ";
+
+} else if (imc > 30 && imc <= 39.9){
+
+    cout << "obesidade";
+
+} else { cout <<"obesidade nivel 2";}
+
+return 0;
+}
